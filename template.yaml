@@ -20,6 +20,7 @@ spec:
           key: name
           description: Unique name of the component
           required: true
+          default: firefire
         - title: Description
           description: Help others understand what this service does.
           required: true
@@ -56,6 +57,7 @@ spec:
           key: host
           description: Hostname of the application
           required: true
+          default: http://fireworks.krateo.io
     - title: Git repository destination
       properties:
         - title: Endpoint
@@ -77,3 +79,4 @@ spec:
           required: true
           description: Repo Name
           key: repositoryName
+          default: firefire

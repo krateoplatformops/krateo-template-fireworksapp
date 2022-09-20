@@ -2,10 +2,10 @@
 apiVersion: apiextensions.crossplane.io/v1
 kind: Composition
 metadata:
-  name: fireworksapp.templates.krateo.io
+  name: fireworksapp.deployments.krateo.io
 spec:
   compositeTypeRef:
-    apiVersion: templates.krateo.io/v1alpha1
+    apiVersion: deployments.krateo.io/v1alpha1
     kind: FireworksApp
   resources:
     - base:
@@ -46,8 +46,8 @@ spec:
                 syncPolicy:
                   automated:
                     prune: true
-                  syncOptions:     # Sync options which modifies sync behavior
-                  - CreateNamespace=true # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.
+                  syncOptions: # Sync options which modifies sync behavior
+                    - CreateNamespace=true # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.
       patches:
         - fromFieldPath: "metadata.labels[deploymentId]"
           toFieldPath: "metadata.labels[deploymentId]"
