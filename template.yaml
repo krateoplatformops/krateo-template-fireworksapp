@@ -2,73 +2,78 @@ apiVersion: krateo.io/v1alpha1
 kind: Template
 metadata:
   name: Krateo Fireworks
-  annotations:
-    title: Krateo Fireworks
-    description: Krateo Fireworks Template
-    icon: fa-solid fa-fire
-    owner: mauro.sala@kiratech.it
-  labels:
-    tags:
-      - fireworks
-      - template
-      - krateo
-      - katy perry
 spec:
+  owner: mauro.sala@kiratech.it
+  title: Krateo Fireworks
+  description: Krateo Fireworks Template
+  icon: fa-solid fa-fire
+  tags:
+    - fireworks
+    - template
+    - krateo
+    - katy perry
   widgets:
     - title: Name and description
       description: Name your app
       properties:
-        name:
-          title: Name
+        - title: Name
+          key: name
           description: Unique name of the component
           required: true
-        description:
-          title: Description
+        - title: Description
           description: Help others understand what this service does.
           required: true
+          key: description
           default: Cause baby, you're a firework. Come on, show 'em what you're worth
-        namespace:
-          title: Krateo namespace
+        - title: Krateo namespace
+          key: namespace
+          default: krateo-system
           description: Krateo namespace for the stack.
           required: true
     - title: Kubernetes
       properties:
-        replicas:
-          title: Replicas
+        - title: Replicas
+          key: replicas
           description: Number of replicas
           type: radio
           required: true
           default: 3
-          values:
-            - 1
-            - 2
-            - 3
-            - 4
-            - 5
-
+          options:
+            - title: 1
+              value: 1
+            - title: 2
+              value: 2
+            - title: 3
+              value: 3
+            - title: 4
+              value: 4
+            - title: 5
+              value: 5
     - title: Expose application
       description: Expose your application
       properties:
-        host:
-          title: Host
+        - title: Host
+          key: host
           description: Hostname of the application
           required: true
-
     - title: Git repository destination
       properties:
-        provider:
-          title: Git Provider
+        - title: Endpoint
+          key: ednpointName
           description: github.com / gitlab.com / bitbucket.org
           required: true
           default: github.com
+          type: select
           values:
-            - github.com
-        organizationName:
-          title: Repository Organization
-          required: true
-          description: Organization name
+            - title: github.com
+              value: github.com
+        - title: Organization Name
+          description: Organization Name
           default: krateoplatformops
-        repositoryName:
-          title: Repository Name
           required: true
-          description: The name of the repository
+          readOnly: true
+          key: organizationName
+        - title: Repo Name
+          required: true
+          description: Repo Name
+          key: repositoryName
