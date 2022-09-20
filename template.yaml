@@ -64,7 +64,7 @@ spec:
           required: true
           default: github.com
           type: select
-          values:
+          options:
             - title: github.com
               value: github.com
         - title: Organization Name
