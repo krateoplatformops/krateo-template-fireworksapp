@@ -1,7 +1,7 @@
 apiVersion: krateo.io/v1alpha1
 kind: Template
 metadata:
-  name: Krateo Fireworks
+  name: krateo-fireworks
 spec:
   owner: mauro.sala@kiratech.it
   title: Krateo Fireworks
