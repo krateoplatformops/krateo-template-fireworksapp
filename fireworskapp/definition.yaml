@@ -51,5 +51,5 @@ spec:
                     schema:
                       type: string
                 _values:
-                  description: FireworksApp template values
+                  description: FireworksApp deployment values
                   type: string

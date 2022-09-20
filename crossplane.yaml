@@ -1,10 +1,10 @@
 apiVersion: meta.pkg.crossplane.io/v1alpha1
 kind: Configuration
 metadata:
-  name: krateo-template-fireworksapp
+  name: krateo-deployment-fireworksapp
   annotations:
     meta.crossplane.io/maintainer: Diego Braga <diego.braga@kiratech.it>
-    meta.crossplane.io/keywords: krateo, template, app
+    meta.crossplane.io/keywords: krateo, deployment, app
     meta.crossplane.io/source: github.com/krateoplatformops/krateo-template-fireworksapp
     meta.crossplane.io/license: Apache-2.0
     meta.crossplane.io/description: |
