@@ -1,7 +1,7 @@
 # {{=<% %>=}}
 ---
 apiVersion: deployments.krateo.io/v1alpha1
-kind: FireworksApp
+kind: fireworksapp
 metadata:
   name: <% name %>-fireworksapp
 spec:
