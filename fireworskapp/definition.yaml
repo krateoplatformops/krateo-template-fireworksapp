@@ -17,39 +17,87 @@ spec:
           properties:
             spec:
               properties:
-                namespace:
-                  description: Kubernetes namespace for Krateo, i.e. krateo-system
+                owner:
                   type: string
-                fromRepo:
+                title:
+                  type: string
+                description:
+                  type: string
+                icon:
+                  type: string
+                tags:
+                  type: array
+                  items:
+                    type: string
+                links:
+                  type: array
+                  items:
+                    properties:
+                      url:
+                        type: string
+                      title:
+                        type: string
+                      icon:
+                        type: string
+                plugins:
+                  type: array
+                  items:
+                    properties:
+                      name:
+                        type: string
+                      value:
+                        type: string
+                      values:
+                        type: array
+                        items:
+                          type: string
+                      type:
+                        type: string
+                      icon:
+                        type: string
+                      endpointName:
+                        type: string
+                values:
                   type: object
-                  properties:
-                    domain:
-                      type: string
-                    provider:
-                      type: string
-                    apiUrl:
-                      type: string
-                    repositoryName:
-                      type: string
-                    organizationName:
-                      type: string
-                    schema:
-                      type: string
-                toRepo:
-                  type: object
-                  properties:
-                    domain:
-                      type: string
-                    provider:
-                      type: string
-                    apiUrl:
-                      type: string
-                    repositoryName:
-                      type: string
-                    organizationName:
-                      type: string
-                    schema:
-                      type: string
-                _values:
                   description: FireworksApp deployment values
-                  type: string
+                  properties:
+                    name:
+                      type: string
+                    description:
+                      type: string
+                    namespace:
+                      type: string
+                    replicas:
+                      type: string
+                    host:
+                      type: string
+                    endpointName:
+                      type: string
+                    organizationName:
+                      type: string
+                    repositoryName:
+                      type: string
+                    fromRepoDomain:
+                      type: string
+                    fromRepoEndpointName:
+                      type: string
+                    fromRepoApiUrl:
+                      type: string
+                    fromRepoRepositoryName:
+                      type: string
+                    fromRepoOrganizationName:
+                      type: string
+                    fromRepoSchema:
+                      type: string
+                    toRepoDomain:
+                      type: string
+                    toRepoEndpointName:
+                      type: string
+                    toRepoApiUrl:
+                      type: string
+                    toRepoRepositoryName:
+                      type: string
+                    toRepoOrganizationName:
+                      type: string
+                    toRepoSchema:
+                      type: string

@@ -4,8 +4,6 @@ apiVersion: deployments.krateo.io/v1alpha1
 kind: FireworksApp
 metadata:
   name: <% name %>-fireworksapp
-  labels:
-    deploymentId: <% deploymentId %>
 spec:
   owner: mauro
   title: <% name %>
