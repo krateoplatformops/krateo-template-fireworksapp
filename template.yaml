@@ -61,7 +61,7 @@ spec:
     - title: Git repository destination
       properties:
         - title: Endpoint
-          key: ednpointName
+          key: endpointName
           description: github.com / gitlab.com / bitbucket.org
           required: true
           default: github.com
