@@ -15,7 +15,7 @@ spec:
     - krateo
     - katy perry
   links:
-    - url: https://<% provider %>/<% organizationName %>/<% repositoryName %>
+    - url: https://<% endpointName %>/<% organizationName %>/<% repositoryName %>
       title: <% organizationName %>/<% repositoryName %>
       icon: "fa-brands fa-git"
   plugins:
