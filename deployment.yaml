@@ -26,12 +26,12 @@ spec:
       endpointName: argocd
     - name: documentation
       values:
-        - README.md
+        - "[krateoplatformops][krateo]README.md"
       type: doc
       icon: fa-solid fa-book
       endpointName: github.com
     - name: kubernetes
-      value: "deploymentId=<% deploymentId %>"
+      value: deploymentId
       type: kubernetes
       icon: fa-brands fa-docker
     - name: pipelines
@@ -40,4 +40,11 @@ spec:
       type: pipeline
       icon: fa-solid fa-person-running
       endpointName: github.com
-  namespace: <% namespace %>
+  namespace: krateo-system
+  values:
+    replicas: <% replicas %>
+    organizationName: krateoplatformops
+    repositoryName: <% owner %>-fire-<% name %>
+    destinationApiUrl: <% destinationEndpoint.target %>
+    host: <% host %>
+    description: Cause baby, you're a firework. Come on, show 'em what you're worth
