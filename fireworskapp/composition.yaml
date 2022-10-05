@@ -2,10 +2,10 @@
 apiVersion: apiextensions.crossplane.io/v1
 kind: Composition
 metadata:
-  name: fireworksapp.deployments.krateo.io
+  name: fireworksapp.deployment.krateo.io
 spec:
   compositeTypeRef:
-    apiVersion: deployments.krateo.io/v1alpha1
+    apiVersion: deployment.krateo.io/v1alpha1
     kind: FireworksApp
   resources:
     - base:
@@ -15,7 +15,7 @@ spec:
           credentials:
             source: InjectedIdentity
       patches:
-        - fromFieldPath: "metadata.labels[deploymentId]"
+        - fromFieldPath: "metadata.uid"
           toFieldPath: "metadata.labels[deploymentId]"
         - fromFieldPath: metadata.name
           toFieldPath: metadata.name
@@ -49,9 +49,9 @@ spec:
                   syncOptions: # Sync options which modifies sync behavior
                     - CreateNamespace=true # Namespace Auto-Creation ensures that namespace specified as the application destination exists in the destination cluster.
       patches:
-        - fromFieldPath: "metadata.labels[deploymentId]"
+        - fromFieldPath: "metadata.uid"
           toFieldPath: "metadata.labels[deploymentId]"
-        - fromFieldPath: "metadata.labels[deploymentId]"
+        - fromFieldPath: "metadata.uid"
           toFieldPath: "spec.forProvider.manifest.metadata.labels[deploymentId]"
         - fromFieldPath: "metadata.name"
           toFieldPath: "metadata.name"
@@ -100,8 +100,8 @@ spec:
               namespace: krateo-system
               key: token
       patches:
-        - fromFieldPath: "metadata.labels[deploymentId]"
-          toFieldPath: "metadata.labels[deploymentId]"
+        - fromFieldPath: "metadata.uid"
+          toFieldPath: "metadata.uid"
         - fromFieldPath: "metadata.name"
           toFieldPath: "metadata.name"
           transforms:
@@ -141,9 +141,9 @@ spec:
               metadata:
                 namespace: krateo-system
       patches:
-        - fromFieldPath: "metadata.labels[deploymentId]"
+        - fromFieldPath: "metadata.uid"
           toFieldPath: "metadata.labels[deploymentId]"
-        - fromFieldPath: "metadata.labels[deploymentId]"
+        - fromFieldPath: "metadata.uid"
           toFieldPath: "spec.forProvider.manifest.metadata.labels[deploymentId]"
         - fromFieldPath: "metadata.name"
           toFieldPath: "metadata.name"
@@ -178,7 +178,7 @@ spec:
               namespace: krateo-system
               key: json
       patches:
-        - fromFieldPath: "metadata.labels[deploymentId]"
+        - fromFieldPath: "metadata.uid"
           toFieldPath: "metadata.labels[deploymentId]"
         - type: CombineFromComposite
           combine:
@@ -226,9 +226,9 @@ spec:
               namespace: krateo-system
               key: token
       patches:
-        - fromFieldPath: "metadata.labels[deploymentId]"
+        - fromFieldPath: "metadata.uid"
           toFieldPath: "metadata.labels[deploymentId]"
-        - fromFieldPath: "metadata.labels[deploymentId]"
+        - fromFieldPath: "metadata.uid"
           toFieldPath: "spec.forProvider.deploymentId"
         - fromFieldPath: "metadata.name"
           toFieldPath: "metadata.name"
@@ -254,9 +254,9 @@ spec:
             fromRepo:
               path: skeleton
       patches:
-        - fromFieldPath: "metadata.labels[deploymentId]"
+        - fromFieldPath: "metadata.uid"
           toFieldPath: "metadata.labels[deploymentId]"
-        - fromFieldPath: "metadata.labels[deploymentId]"
+        - fromFieldPath: "metadata.uid"
           toFieldPath: "spec.forProvider.deploymentId"
         - fromFieldPath: "spec.toRepo.organizationName"
           toFieldPath: "spec.forProvider.org"

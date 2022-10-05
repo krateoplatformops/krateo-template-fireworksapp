@@ -2,9 +2,9 @@
 apiVersion: apiextensions.crossplane.io/v1
 kind: CompositeResourceDefinition
 metadata:
-  name: fireworksapp.deployments.krateo.io
+  name: fireworksapp.deployment.krateo.io
 spec:
-  group: deployments.krateo.io
+  group: deployment.krateo.io
   names:
     kind: FireworksApp
     plural: fireworksapp
