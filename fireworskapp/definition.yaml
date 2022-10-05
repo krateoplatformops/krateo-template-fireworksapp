@@ -70,7 +70,7 @@ spec:
                     namespace:
                       type: string
                     replicas:
-                      type: string
+                      type: integer
                     host:
                       type: string
                     endpointName:
