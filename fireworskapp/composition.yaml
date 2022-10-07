@@ -100,8 +100,6 @@ spec:
               namespace: krateo-system
               key: token
       patches:
-        - fromFieldPath: "metadata.uid"
-          toFieldPath: "metadata.uid"
         - fromFieldPath: "metadata.name"
           toFieldPath: "metadata.name"
           transforms:
