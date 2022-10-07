@@ -48,7 +48,7 @@ spec:
     destinationApiUrl: <% destinationEndpoint.target %>
     host: <% host %>
     description: Cause baby, you're a firework. Come on, show 'em what you're worth
-    endpointName: <% destinationEndpoint %>
+    endpointName: <% destinationEndpoint.name %>
     fromRepo:
       schema: https
       organizationName: krateoplatformops
