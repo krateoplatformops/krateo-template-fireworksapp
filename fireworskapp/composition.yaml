@@ -157,40 +157,22 @@ spec:
           combine:
             variables:
               - fromFieldPath: "spec.values.replicas"
-              - fromFieldPath: "spec.values.organizationName"
-              - fromFieldPath: "spec.values.repositoryName"
-              - fromFieldPath: "spec.values.destinationApiUrl"
-              - fromFieldPath: "spec.values.host"
-              - fromFieldPath: "spec.values.description"
-              - fromFieldPath: "spec.values.endpointName"
-              - fromFieldPath: "spec.values.namespace"
-              - fromFieldPath: "spec.values.fromRepo.schema"
-              - fromFieldPath: "spec.values.fromRepo.organizationName"
-              - fromFieldPath: "spec.values.fromRepo.repositoryName"
-              - fromFieldPath: "spec.values.toRepo.schema"
-              - fromFieldPath: "spec.values.toRepo.organizationName"
-              - fromFieldPath: "spec.values.toRepo.repositoryName"
+              # - fromFieldPath: "spec.values.organizationName"
+              # - fromFieldPath: "spec.values.repositoryName"
+              # - fromFieldPath: "spec.values.destinationApiUrl"
+              # - fromFieldPath: "spec.values.host"
+              # - fromFieldPath: "spec.values.description"
+              # - fromFieldPath: "spec.values.endpointName"
+              # - fromFieldPath: "spec.values.namespace"
+              # - fromFieldPath: "spec.values.fromRepo.schema"
+              # - fromFieldPath: "spec.values.fromRepo.organizationName"
+              # - fromFieldPath: "spec.values.fromRepo.repositoryName"
+              # - fromFieldPath: "spec.values.toRepo.schema"
+              # - fromFieldPath: "spec.values.toRepo.organizationName"
+              # - fromFieldPath: "spec.values.toRepo.repositoryName"
             strategy: string
             string:
-              fmt: "{ replicas: %d,          |
-                      organizationName: %s,  |
-                      repositoryName: %s,    |
-                      destinationApiUrl: %s, |
-                      host: %s,              |
-                      description: %s,       |
-                      endpointName: %s,      |
-                      namespace: %s,         |
-                      fromRepo: {            |
-                        schema: %s,          |
-                        organizationName: %s,|
-                        repositoryName: %s   |
-                      },                     |
-                      toRepo: {              |
-                        schema: %s,          |
-                        organizationName: %s,|
-                        repositoryName: %s   |
-                      }                      |
-                    }"
+              fmt: "{ replicas: %d }"
           toFieldPath: "spec.forProvider.manifest.data.json"
         - fromFieldPath: metadata.name
           toFieldPath: spec.forProvider.manifest.metadata.name
