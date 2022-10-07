@@ -158,8 +158,8 @@ spec:
             variables:
               - fromFieldPath: "spec.values.replicas"
               - fromFieldPath: "spec.values.organizationName"
-              # - fromFieldPath: "spec.values.repositoryName"
-              # - fromFieldPath: "spec.values.destinationApiUrl"
+              - fromFieldPath: "spec.values.repositoryName"
+              - fromFieldPath: "spec.values.destinationApiUrl"
               # - fromFieldPath: "spec.values.host"
               # - fromFieldPath: "spec.values.description"
               # - fromFieldPath: "spec.values.endpointName"
@@ -172,8 +172,10 @@ spec:
               # - fromFieldPath: "spec.values.toRepo.repositoryName"
             strategy: string
             string:
-              fmt: "{ replicas: %d, |
-                      organizationName: %s
+              fmt: "{ replicas: %d,
+                      organizationName: %s,
+                      repositoryName: %s,
+                      destinationApiUrl: %s
                     }"
           toFieldPath: "spec.forProvider.manifest.data.json"
         - fromFieldPath: metadata.name
