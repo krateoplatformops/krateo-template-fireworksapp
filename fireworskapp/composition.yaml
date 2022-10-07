@@ -146,7 +146,8 @@ spec:
           transforms:
             - type: string
               string:
-                fmt: "%s-fireworksapp-values"
+                 type: Convert
+                 convert: ToBase64
         - fromFieldPath: metadata.name
           toFieldPath: spec.providerConfigRef.name
           transforms:
