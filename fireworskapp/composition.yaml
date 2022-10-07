@@ -155,6 +155,10 @@ spec:
                 fmt: "%s-provider-k8s-pc-in"
         - fromFieldPath: spec.values
           toFieldPath: spec.forProvider.manifest.data.json
+          transforms:
+            - type: string
+              string:
+                fmt: "%s"
         - fromFieldPath: metadata.name
           toFieldPath: spec.forProvider.manifest.metadata.name
           transforms:
