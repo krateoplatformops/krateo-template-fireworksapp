@@ -157,10 +157,9 @@ spec:
           combine:
             variables:
               - fromFieldPath: "spec.values.replicas"
-              - fromFieldPath: "spec.values.organizationName"
-              - fromFieldPath: "spec.values.repositoryName"
-              - fromFieldPath: "spec.values.destinationApiUrl"
-              # - fromFieldPath: "spec.values.host"
+              # - fromFieldPath: "spec.values.organizationName"
+              # - fromFieldPath: "spec.values.repositoryName"
+              - fromFieldPath: "spec.values.host"
               # - fromFieldPath: "spec.values.description"
               # - fromFieldPath: "spec.values.endpointName"
               # - fromFieldPath: "spec.values.namespace"
@@ -168,14 +167,14 @@ spec:
               # - fromFieldPath: "spec.values.fromRepo.organizationName"
               # - fromFieldPath: "spec.values.fromRepo.repositoryName"
               # - fromFieldPath: "spec.values.toRepo.schema"
-              # - fromFieldPath: "spec.values.toRepo.organizationName"
-              # - fromFieldPath: "spec.values.toRepo.repositoryName"
+              - fromFieldPath: "spec.values.toRepo.organizationName"
+              - fromFieldPath: "spec.values.toRepo.repositoryName"
             strategy: string
             string:
               fmt: "{ replicas: %d,
+                      host: %s,
                       organizationName: %s,
-                      repositoryName: %s,
-                      destinationApiUrl: %s
+                      repositoryName: %s
                     }"
           toFieldPath: "spec.forProvider.manifest.data.json"
         - fromFieldPath: metadata.name
