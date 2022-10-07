@@ -63,10 +63,6 @@ spec:
                   type: object
                   description: FireworksApp deployment values
                   properties:
-                    name:
-                      type: string
-                    description:
-                      type: string
                     namespace:
                       type: string
                     replicas:
@@ -79,27 +75,21 @@ spec:
                       type: string
                     repositoryName:
                       type: string
-                    fromRepoDomain:
-                      type: string
-                    fromRepoEndpointName:
-                      type: string
-                    fromRepoApiUrl:
-                      type: string
-                    fromRepoRepositoryName:
-                      type: string
-                    fromRepoOrganizationName:
-                      type: string
-                    fromRepoSchema:
-                      type: string
-                    toRepoDomain:
-                      type: string
-                    toRepoEndpointName:
-                      type: string
-                    toRepoApiUrl:
-                      type: string
-                    toRepoRepositoryName:
-                      type: string
-                    toRepoOrganizationName:
-                      type: string
-                    toRepoSchema:
-                      type: string
+                    fromRepo:
+                      type: object
+                      properties:
+                        schema:
+                          type: string
+                        organizationName:
+                          type: string
+                        repositoryName:
+                          type: string
+                    toRepo:
+                      type: object
+                      properties:
+                        schema:
+                          type: string
+                        organizationName:
+                          type: string
+                        repositoryName:
+                          type: string
