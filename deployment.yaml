@@ -40,7 +40,6 @@ spec:
       type: pipeline
       icon: fa-solid fa-person-running
       endpointName: github
-  namespace: krateo-system
   values:
     replicas: <% replicas %>
     organizationName: krateoplatformops
@@ -48,7 +47,8 @@ spec:
     destinationApiUrl: <% destinationEndpoint.target %>
     host: <% host %>
     description: Cause baby, you're a firework. Come on, show 'em what you're worth
-    endpointName: <% destinationEndpoint.name %>
+    endpointName: <% destinationEndpoint.friendlyName %>
+    namespace: <% krateo-system %>
     fromRepo:
       schema: https
       organizationName: krateoplatformops
