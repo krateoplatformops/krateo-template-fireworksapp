@@ -70,13 +70,11 @@ spec:
         - type: CombineFromComposite
           combine:
             variables:
-              - fromFieldPath: "spec.values.toRepo.schema"
-              - fromFieldPath: "spec.values.endpointName"
               - fromFieldPath: "spec.values.toRepo.organizationName"
               - fromFieldPath: "spec.values.toRepo.repositoryName"
             strategy: string
             string:
-              fmt: "%s://%s/%s/%s"
+              fmt: "https://github.com/%s/%s"
           toFieldPath: "spec.forProvider.manifest.spec.source.repoURL"
         - fromFieldPath: "spec.namespace"
           toFieldPath: "spec.forProvider.manifest.metadata.namespace"
@@ -111,13 +109,13 @@ spec:
           transforms:
             - type: string
               string:
-                fmt: "%s-secret"
+                fmt: "%s-endpoint"
         - fromFieldPath: "spec.values.endpointName"
           toFieldPath: "spec.toRepoCredentials.secretRef.name"
           transforms:
             - type: string
               string:
-                fmt: "%s-secret"
+                fmt: "%s-endpoint"
         - fromFieldPath: "spec.namespace"
           toFieldPath: "spec.deploymentServiceUrl"
           transforms:
@@ -181,24 +179,20 @@ spec:
         - type: CombineFromComposite
           combine:
             variables:
-              - fromFieldPath: "spec.values.fromRepo.schema"
-              - fromFieldPath: "spec.values.endpointName"
               - fromFieldPath: "spec.values.fromRepo.organizationName"
               - fromFieldPath: "spec.values.fromRepo.repositoryName"
             strategy: string
             string:
-              fmt: "%s://%s/%s/%s"
+              fmt: "https://github.com/%s/%s"
           toFieldPath: "spec.forProvider.fromRepo.url"
         - type: CombineFromComposite
           combine:
             variables:
-              - fromFieldPath: "spec.values.toRepo.schema"
-              - fromFieldPath: "spec.values.endpointName"
               - fromFieldPath: "spec.values.toRepo.organizationName"
               - fromFieldPath: "spec.values.toRepo.repositoryName"
             strategy: string
             string:
-              fmt: "%s://%s/%s/%s"
+              fmt: "https://github.com/%s/%s"
           toFieldPath: "spec.forProvider.toRepo.url"
         - fromFieldPath: metadata.name
           toFieldPath: spec.providerConfigRef.name
@@ -239,7 +233,7 @@ spec:
           transforms:
             - type: string
               string:
-                fmt: "%s-secret"
+                fmt: "%s-endpoint"
         - fromFieldPath: "spec.values.toRepo.apiUrl"
           toFieldPath: "spec.apiUrl"
         - fromFieldPath: "spec.namespace"
