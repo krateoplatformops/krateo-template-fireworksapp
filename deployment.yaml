@@ -29,17 +29,17 @@ spec:
         - "[krateoplatformops][krateo]README.md"
       type: doc
       icon: fa-solid fa-book
-      endpointName: github.com
+      endpointName: github
     - name: kubernetes
       value: deploymentId
       type: kubernetes
       icon: fa-brands fa-docker
     - name: pipelines
       values:
-        - Build Docker image for every commit
+        - "[krateoplatformops][krateo]release"
       type: pipeline
       icon: fa-solid fa-person-running
-      endpointName: github.com
+      endpointName: github
   namespace: krateo-system
   values:
     replicas: <% replicas %>
