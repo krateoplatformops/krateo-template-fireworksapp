@@ -70,10 +70,10 @@ spec:
         - type: CombineFromComposite
           combine:
             variables:
-              - fromFieldPath: "spec.toRepo.schema"
-              - fromFieldPath: "spec.toRepo.domain"
-              - fromFieldPath: "spec.toRepo.organizationName"
-              - fromFieldPath: "spec.toRepo.repositoryName"
+              - fromFieldPath: "spec.values.toRepo.schema"
+              - fromFieldPath: "spec.values.endpointName"
+              - fromFieldPath: "spec.values.toRepo.organizationName"
+              - fromFieldPath: "spec.values.toRepo.repositoryName"
             strategy: string
             string:
               fmt: "%s://%s/%s/%s"
@@ -108,13 +108,13 @@ spec:
             - type: string
               string:
                 fmt: "%s-provider-git-pc"
-        - fromFieldPath: "spec.fromRepo.domain"
+        - fromFieldPath: "spec.values.endpointName"
           toFieldPath: "spec.fromRepoCredentials.secretRef.name"
           transforms:
             - type: string
               string:
                 fmt: "%s-secret"
-        - fromFieldPath: "spec.toRepo.domain"
+        - fromFieldPath: "spec.values.endpointName"
           toFieldPath: "spec.toRepoCredentials.secretRef.name"
           transforms:
             - type: string
@@ -183,10 +183,10 @@ spec:
         - type: CombineFromComposite
           combine:
             variables:
-              - fromFieldPath: "spec.fromRepo.schema"
-              - fromFieldPath: "spec.fromRepo.domain"
-              - fromFieldPath: "spec.fromRepo.organizationName"
-              - fromFieldPath: "spec.fromRepo.repositoryName"
+              - fromFieldPath: "spec.values.fromRepo.schema"
+              - fromFieldPath: "spec.values.endpointName"
+              - fromFieldPath: "spec.values.fromRepo.organizationName"
+              - fromFieldPath: "spec.values.fromRepo.repositoryName"
             strategy: string
             string:
               fmt: "%s://%s/%s/%s"
@@ -194,10 +194,10 @@ spec:
         - type: CombineFromComposite
           combine:
             variables:
-              - fromFieldPath: "spec.toRepo.schema"
-              - fromFieldPath: "spec.toRepo.domain"
-              - fromFieldPath: "spec.toRepo.organizationName"
-              - fromFieldPath: "spec.toRepo.repositoryName"
+              - fromFieldPath: "spec.values.toRepo.schema"
+              - fromFieldPath: "spec.values.endpointName"
+              - fromFieldPath: "spec.values.toRepo.organizationName"
+              - fromFieldPath: "spec.values.toRepo.repositoryName"
             strategy: string
             string:
               fmt: "%s://%s/%s/%s"
@@ -236,13 +236,13 @@ spec:
             - type: string
               string:
                 fmt: "%s-provider-github-pc"
-        - fromFieldPath: "spec.toRepo.domain"
+        - fromFieldPath: "spec.values.endpointName"
           toFieldPath: "spec.credentials.secretRef.name"
           transforms:
             - type: string
               string:
                 fmt: "%s-secret"
-        - fromFieldPath: "spec.toRepo.apiUrl"
+        - fromFieldPath: "spec.values.toRepo.apiUrl"
           toFieldPath: "spec.apiUrl"
         - fromFieldPath: "spec.namespace"
           toFieldPath: "spec.credentials.secretRef.namespace"
@@ -259,9 +259,9 @@ spec:
           toFieldPath: "metadata.labels[deploymentId]"
         - fromFieldPath: "metadata.uid"
           toFieldPath: "spec.forProvider.deploymentId"
-        - fromFieldPath: "spec.toRepo.organizationName"
+        - fromFieldPath: "spec.values.toRepo.organizationName"
           toFieldPath: "spec.forProvider.org"
-        - fromFieldPath: "spec.toRepo.repositoryName"
+        - fromFieldPath: "spec.values.toRepo.repositoryName"
           toFieldPath: "spec.forProvider.name"
         - fromFieldPath: metadata.name
           toFieldPath: spec.providerConfigRef.name

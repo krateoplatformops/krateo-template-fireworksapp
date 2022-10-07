@@ -48,3 +48,12 @@ spec:
     destinationApiUrl: <% destinationEndpoint.target %>
     host: <% host %>
     description: Cause baby, you're a firework. Come on, show 'em what you're worth
+    endpointName: <% destinationEndpoint %>
+    fromRepo:
+      schema: https
+      organizationName: krateoplatformops
+      repositoryName: krateo-template-fireworksapp
+    toRepo:
+      schema: https
+      organizationName: krateoplatformops
+      repositoryName: <% owner %>-fire-<% name %>
