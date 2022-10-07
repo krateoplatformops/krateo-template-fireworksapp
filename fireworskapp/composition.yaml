@@ -172,7 +172,7 @@ spec:
               path: skeleton
             configMapKeyRef:
               namespace: krateo-system
-              key: json
+              key: values
       patches:
         - fromFieldPath: "metadata.uid"
           toFieldPath: "metadata.labels[deploymentId]"
