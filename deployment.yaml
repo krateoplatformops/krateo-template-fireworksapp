@@ -48,7 +48,7 @@ spec:
     host: <% host %>
     description: Cause baby, you're a firework. Come on, show 'em what you're worth
     endpointName: <% destinationEndpoint.friendlyName %>
-    namespace: <% krateo-system %>
+    namespace: krateo-system
     fromRepo:
       schema: https
       organizationName: krateoplatformops
