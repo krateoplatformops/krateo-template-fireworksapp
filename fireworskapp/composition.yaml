@@ -166,16 +166,18 @@ spec:
               # - fromFieldPath: "spec.values.fromRepo.schema"
               # - fromFieldPath: "spec.values.fromRepo.organizationName"
               # - fromFieldPath: "spec.values.fromRepo.repositoryName"
-              # - fromFieldPath: "spec.values.toRepo.schema"
               - fromFieldPath: "spec.values.toRepo.organizationName"
               - fromFieldPath: "spec.values.toRepo.repositoryName"
+              - fromFieldPath: "spec.values.toRepo.schema"
             strategy: string
             string:
-              fmt: "{ replicas: %d,
-                      host: %s,
-                      organizationName: %s,
-                      repositoryName: %s
-                    }"
+              fmt: '{ replicas: %d,
+                host: "%s",
+                organizationName: "%s",
+                repositoryName: "%s",
+                schema: "%s",
+                apiUrl: "https://api.github.com",
+                }'
           toFieldPath: "spec.forProvider.manifest.data.json"
         - fromFieldPath: metadata.name
           toFieldPath: spec.forProvider.manifest.metadata.name
