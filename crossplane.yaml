@@ -22,5 +22,5 @@ spec:
   crossplane:
     version: ">=v1.8.0-0"
   dependsOn:
-    - configuration: "registry.upbound.io/crossplane/provider-helm"
+    - configuration: "xpkg.upbound.io/crossplane-contrib/provider-helm"
       version: ">=v0.10.0-0"
