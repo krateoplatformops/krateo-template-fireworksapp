@@ -3,7 +3,7 @@
 apiVersion: deployment.krateo.io/v1alpha1
 kind: FireworksApp
 metadata:
-  name: <% name %>-fireworksapp
+  name: <%#norm%>{{name}}<%/norm%>-fireworksapp
 spec:
   owner: mauro
   title: <% name %>
@@ -20,7 +20,7 @@ spec:
       icon: "fa-brands fa-git"
   plugins:
     - name: resources
-      value: <% name %>-fireworksapp
+      value: <%#norm%>{{name}}<%/norm%>-fireworksapp
       type: argocd
       icon: fa-solid fa-diagram-project
       endpointName: argocd
@@ -43,7 +43,7 @@ spec:
   values:
     replicas: <% replicas %>
     organizationName: krateoplatformops
-    repositoryName: <% owner %>-fire-<% name %>
+    repositoryName: <% owner %>-fire-<%#norm%>{{name}}<%/norm%>
     destinationApiUrl: <% destinationEndpoint.target %>
     host: <% host %>
     description: Cause baby, you're a firework. Come on, show 'em what you're worth
@@ -56,4 +56,4 @@ spec:
     toRepo:
       schema: https
       organizationName: krateoplatformops
-      repositoryName: <% owner %>-fire-<% name %>
+      repositoryName: <% owner %>-fire-<%#norm%>{{name}}<%/norm%>
