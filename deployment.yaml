@@ -57,3 +57,4 @@ spec:
       schema: https
       organizationName: krateoplatformops
       repositoryName: <% owner %>-fire-<%#norm%>{{name}}<%/norm%>
+      apiUrl: https://api.github.com
