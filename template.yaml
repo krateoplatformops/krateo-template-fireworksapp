@@ -47,7 +47,7 @@ spec:
           key: host
           description: Hostname of the application
           required: true
-          default: http://fireworks.krateo.io
+          default: fireworks.krateo.io
     - title: Git repository destination
       properties:
         - title: Endpoint
