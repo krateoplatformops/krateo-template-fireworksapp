@@ -36,7 +36,7 @@ spec:
       icon: fa-brands fa-docker
     - name: pipelines
       values:
-        - "[krateoplatformops][<% owner %>-fire-<%#norm%>{{name}}<%/norm%>]release"
+        - "[krateoplatformops][<% owner %>-fire-<%#norm%>{{name}}<%/norm%>]Build Docker image for every commit"
       type: pipeline
       icon: fa-solid fa-person-running
       endpointName: github
