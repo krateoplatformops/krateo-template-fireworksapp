@@ -180,7 +180,7 @@ spec:
                 "apiUrl": "https://api.github.com",
                 "endpointName": "%s"
                 }'
-          toFieldPath: "spec.forProvider.manifest.data.json"
+          toFieldPath: "spec.forProvider.manifest.data.values"
         - fromFieldPath: metadata.name
           toFieldPath: spec.forProvider.manifest.metadata.name
           transforms:
