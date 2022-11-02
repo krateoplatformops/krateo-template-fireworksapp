@@ -85,7 +85,7 @@ spec:
         apiVersion: git.krateo.io/v1alpha1
         kind: ProviderConfig
         spec:
-          deploymentServiceUrl: http://deployment-service-service.krateo-system.svc
+          deploymentServiceUrl: http://deployment-service.krateo-system.svc
           fromRepoCredentials:
             authMethod: basic
             source: Secret
@@ -122,7 +122,7 @@ spec:
           transforms:
             - type: string
               string:
-                fmt: "http://deployment-service-service.%s.svc"
+                fmt: "http://deployment-service.%s.svc"
         - fromFieldPath: "spec.namespace"
           toFieldPath: "spec.fromRepoCredentials.secretRef.namespace"
         - fromFieldPath: "spec.namespace"
