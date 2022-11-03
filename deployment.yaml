@@ -42,7 +42,7 @@ spec:
       endpointName: github
   values:
     replicas: <% replicas %>
-    organizationName: krateoplatformops
+    organizationName: <% organizationName %>
     repositoryName: <% owner %>-fire-<%#norm%>{{name}}<%/norm%>
     destinationApiUrl: <% destinationEndpoint.target %>
     host: <% host %>

@@ -50,6 +50,11 @@ spec:
           default: fireworks.krateo.site
     - title: Git repository destination
       properties:
+        - title: Organization Name
+          key: organizationName
+          description: Organization name
+          required: true
+          default: krateoplatformops
         - title: Endpoint
           key: destinationEndpoint
           description: github.com / gitlab.com / bitbucket.org
