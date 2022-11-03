@@ -26,7 +26,7 @@ spec:
       endpointName: argocd
     - name: documentation
       values:
-        - "[krateoplatformops][<% owner %>-fire-<%#norm%>{{name}}<%/norm%>]README.md"
+        - "[<% organizationName %>][<% owner %>-fire-<%#norm%>{{name}}<%/norm%>]README.md"
       type: doc
       icon: fa-solid fa-book
       endpointName: github
@@ -36,7 +36,7 @@ spec:
       icon: fa-brands fa-docker
     - name: pipelines
       values:
-        - "[krateoplatformops][<% owner %>-fire-<%#norm%>{{name}}<%/norm%>]Build Docker image for every commit"
+        - "[<% organizationName %>][<% owner %>-fire-<%#norm%>{{name}}<%/norm%>]Build Docker image for every commit"
       type: pipeline
       icon: fa-solid fa-person-running
       endpointName: github
@@ -55,6 +55,6 @@ spec:
       repositoryName: krateo-template-fireworksapp
     toRepo:
       schema: https
-      organizationName: krateoplatformops
+      organizationName: <% organizationName %>
       repositoryName: <% owner %>-fire-<%#norm%>{{name}}<%/norm%>
       apiUrl: https://api.github.com
