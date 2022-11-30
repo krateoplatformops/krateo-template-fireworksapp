@@ -93,3 +93,20 @@ spec:
                           type: string
                         repositoryName:
                           type: string
+                templateName:
+                  type: string
+                  description: Name of the template to use for this deployment
+                flat:
+                  type: object
+                  description: FireworksApp deployment flat values
+                  properties:
+                    name:
+                      type: string
+                    replicas:
+                      type: integer
+                    host:
+                      type: string
+                    organizationName:
+                      type: string
+                    destinationEndpoint:
+                      type: string

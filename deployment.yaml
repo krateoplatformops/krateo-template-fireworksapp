@@ -58,3 +58,11 @@ spec:
       organizationName: <% organizationName %>
       repositoryName: <% owner %>-fire-<%#norm%>{{name}}<%/norm%>
       apiUrl: https://api.github.com
+  # for editing purposes
+  templateName: krateo-fireworks
+  flat:
+    name: <% name %>
+    replicas: <% replicas %>
+    host: <% host %>
+    organizationName: <% organizationName %>
+    destinationEndpoint: <% destinationEndpoint %>
