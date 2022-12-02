@@ -65,4 +65,4 @@ spec:
     replicas: <% replicas %>
     host: <% host %>
     organizationName: <% organizationName %>
-    destinationEndpoint: <% destinationEndpoint.name %>
+    destinationEndpoint: <% destinationEndpoint.metadata.name %>
