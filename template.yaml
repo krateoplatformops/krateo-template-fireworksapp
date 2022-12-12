@@ -50,9 +50,9 @@ spec:
           default: fireworks.krateo.site
         - title: Infos
           key: box
-          value: Success infos
+          value: Error infos
           type: box
-          style: success
+          style: error
     - title: Git repository destination
       properties:
         - title: Organization Name
