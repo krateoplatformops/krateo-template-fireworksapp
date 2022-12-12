@@ -50,7 +50,7 @@ spec:
           default: fireworks.krateo.site
         - title: Infos
           key: box
-          value: Warning infos
+          value: Success infos
           type: box
           style: success
     - title: Git repository destination
