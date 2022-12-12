@@ -52,7 +52,7 @@ spec:
           key: box
           value: Warning infos
           type: box
-          style: warning
+          style: success
     - title: Git repository destination
       properties:
         - title: Organization Name
