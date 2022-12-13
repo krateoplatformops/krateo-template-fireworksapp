@@ -22,6 +22,10 @@ spec:
           description: Unique name of the component
           required: true
           default: firefire
+        - title: Office
+          key: office
+          description: Office location
+          default: mapugnano
     - title: Kubernetes
       properties:
         - title: Replicas
