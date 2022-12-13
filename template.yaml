@@ -25,7 +25,6 @@ spec:
         - title: Office
           key: office
           description: Office location
-          default: mapugnano
     - title: Kubernetes
       properties:
         - title: Replicas
