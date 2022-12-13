@@ -12,6 +12,7 @@ spec:
     - template
     - krateo
     - katy perry
+    - demo
   widgets:
     - title: Name and description
       description: Name your app
