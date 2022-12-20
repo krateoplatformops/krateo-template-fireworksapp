@@ -49,11 +49,6 @@ spec:
           description: Hostname of the application
           required: true
           default: fireworks.krateo.site
-        - title: Infos
-          key: box
-          value: Info infos
-          type: box
-          style: info
     - title: Git repository destination
       properties:
         - title: Organization Name
