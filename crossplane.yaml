@@ -21,6 +21,6 @@ metadata:
 spec:
   crossplane:
     version: ">=v1.8.0-0"
-  dependsOn:
-    - configuration: "xpkg.upbound.io/crossplane-contrib/provider-helm"
-      version: ">=v0.10.0-0"
+#  dependsOn:
+#    - configuration: "xpkg.upbound.io/crossplane-contrib/provider-helm"
+#      version: ">=v0.10.0-0"
