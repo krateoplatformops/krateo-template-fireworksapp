@@ -15,8 +15,8 @@ spec:
     - krateo
     - katy perry
   links:
-    - url: https://github.com/<% organizationName %>/<% repositoryName %>
-      title: <% organizationName %>/<% repositoryName %>
+    - url: https://github.com/<% organizationName %>/<% owner %>-fire-<%#norm%>{{name}}<%/norm%>
+      title: <% organizationName %>/<% owner %>-fire-<%#norm%>{{name}}<%/norm%>
       icon: "fa-brands fa-git"
   plugins:
     - name: resources
