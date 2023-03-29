@@ -29,7 +29,7 @@ spec:
         - "[<% organizationName %>][<% owner %>-fire-<%#norm%>{{name}}<%/norm%>]README.md"
       type: doc
       icon: fa-solid fa-book
-      endpointName: github
+      endpointName: github.com
     - name: kubernetes
       value: deploymentId
       type: kubernetes
@@ -39,7 +39,7 @@ spec:
         - "[<% organizationName %>][<% owner %>-fire-<%#norm%>{{name}}<%/norm%>]Build Docker image for every commit"
       type: pipeline
       icon: fa-solid fa-person-running
-      endpointName: github
+      endpointName: github.com
   values:
     replicas: <% replicas %>
     organizationName: <% organizationName %>
