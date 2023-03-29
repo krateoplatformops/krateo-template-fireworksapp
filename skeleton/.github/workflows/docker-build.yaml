@@ -11,6 +11,8 @@ jobs:
   push:
     name: Create docker image
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
     steps:
       - name: Set up Docker Buildx
         id: buildx
